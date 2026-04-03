@@ -1,3 +1,4 @@
+from encodings.punycode import digits
 import os
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
@@ -24,10 +25,11 @@ def index():
 def dial():
     data = request.json
     digits = data.get("digits", "")
-    if digits == "839":
-        return jsonify({"status": "success", "message": "Connecting to Sarvam AI..."})
-    else:
-        return jsonify({"status": "error", "message": "Invalid service code"}), 400
+    # Accept any number and connect to AI
+    return jsonify({
+    "status": "success",
+    "message": f"You entered: {digits}. Connecting to Sarvam AI..."
+})
 
 @app.route("/api/ask", methods=["POST"])
 def ask():
