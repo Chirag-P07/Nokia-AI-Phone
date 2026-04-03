@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokia Sarvam POC</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="phone">
+        <div class="speaker"></div>
+        <div class="screen-container">
+            <div class="screen">
+                <div id="status-bar">
+                    <span class="signal">📶</span>
+                    <!-- Sarvam indicator -->
+                    <span id="ai-indicator" style="display:none;">AI</span>
+                    <span class="battery">🔋</span>
+                </div>
+                <div id="display" class="idle">
+                    <div id="display-text">Enter number...</div>
+                    <div id="transcript-area" style="display:none;"></div>
+                    <div id="response-area" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="brand">NOKIA</div>
+        
+        <div class="controls">
+            <button id="btn-soft-left" class="control-btn soft-key"></button>
+            <button class="nav-btn">
+                <div class="nav-up"></div>
+                <div class="nav-down"></div>
+                <div class="nav-center"></div>
+            </button>
+            <button id="btn-soft-right" class="control-btn soft-key"></button>
+            
+            <button id="btn-call" class="control-btn call-btn">📞</button>
+            <button id="btn-end" class="control-btn end-btn">🔴</button>
+        </div>
+        
+        <div class="keypad">
+            <button class="keypad-btn" data-key="1">1<br><span class="letters"></span></button>
+            <button class="keypad-btn" data-key="2">2<br><span class="letters">ABC</span></button>
+            <button class="keypad-btn" data-key="3">3<br><span class="letters">DEF</span></button>
+            <button class="keypad-btn" data-key="4">4<br><span class="letters">GHI</span></button>
+            <button class="keypad-btn" data-key="5">5<br><span class="letters">JKL</span></button>
+            <button class="keypad-btn" data-key="6">6<br><span class="letters">MNO</span></button>
+            <button class="keypad-btn" data-key="7">7<br><span class="letters">PQRS</span></button>
+            <button class="keypad-btn" data-key="8">8<br><span class="letters">TUV</span></button>
+            <button class="keypad-btn" data-key="9">9<br><span class="letters">WXYZ</span></button>
+            <button class="keypad-btn" data-key="*">*<br><span class="letters">+</span></button>
+            <button class="keypad-btn" data-key="0">0<br><span class="letters">_</span></button>
+            <button class="keypad-btn" data-key="#">#<br><span class="letters"></span></button>
+        </div>
+    </div>
+    
+    <div id="debug-panel">
+        <strong>Status:</strong> <span id="debug-state">Idle</span>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
