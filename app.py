@@ -28,7 +28,7 @@ def dial():
     # Accept any number and connect to AI
     return jsonify({
     "status": "success",
-    "message": f"You entered: {digits}. Connecting to Sarvam AI..."
+    "message": f"You entered: {digits}. Ready to talk to AI."
 })
 
 @app.route("/api/ask", methods=["POST"])
